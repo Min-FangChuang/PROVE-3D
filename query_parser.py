@@ -8,7 +8,7 @@ try:
     from .vlm_api_bridge import call_vlm_api_messages 
 except ImportError:
     from prompt import QUERY_DECOMPOSE_SYSTEM_PROMPT  # type: ignore
-    from from vlm_api_bridge import call_vlm_api_messages   # type: ignore
+    from vlm_api_bridge import call_vlm_api_messages   # type: ignore
 
 
 def _fallback_parse(raw_query: str) -> dict[str, Any]:
