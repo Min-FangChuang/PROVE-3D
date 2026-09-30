@@ -5,10 +5,10 @@ from typing import Any
 
 try:
     from .prompt import QUERY_DECOMPOSE_SYSTEM_PROMPT
-    from .vlm_bridge import call_vlm_messages
+    from .vlm_api_bridge import call_vlm_api_messages 
 except ImportError:
     from prompt import QUERY_DECOMPOSE_SYSTEM_PROMPT  # type: ignore
-    from vlm_bridge import call_vlm_messages  # type: ignore
+    from from vlm_api_bridge import call_vlm_api_messages   # type: ignore
 
 
 def _fallback_parse(raw_query: str) -> dict[str, Any]:
@@ -81,7 +81,7 @@ def parse_query_with_vlm(raw_query: str) -> dict[str, Any]:
     ]
 
     try:
-        result = call_vlm_messages(messages)
+        result =  call_vlm_api_messages(messages)
         result_text = "" if result is None else str(result)
 
         print("[QueryParser] raw result")
