@@ -11,6 +11,8 @@ opencv-python>=4.8,<5
 Pillow>=10,<13
 PyYAML>=6,<7
 requests>=2.31,<3
+imageio>=2.31,<3
+mmengine>=0.10,<1
 
 # ML models
 # pip will resolve a torchvision release compatible with the selected torch.
